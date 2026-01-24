@@ -14,18 +14,18 @@
 
     <!-- Glow effects -->
     <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:0.15" />
+      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:0.12" />
       <stop offset="100%" style="stop-color:#ea580c;stop-opacity:0" />
     </radialGradient>
 
     <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#c2410c;stop-opacity:0.15" />
+      <stop offset="0%" style="stop-color:#c2410c;stop-opacity:0.12" />
       <stop offset="100%" style="stop-color:#c2410c;stop-opacity:0" />
     </radialGradient>
 
     <!-- Subtle pattern -->
     <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#ea580c" opacity="0.05"/>
+      <circle cx="2" cy="2" r="1" fill="#ea580c" opacity="0.04"/>
     </pattern>
   </defs>
 
@@ -35,38 +35,38 @@
   <!-- Dot pattern overlay -->
   <rect width="1200" height="630" fill="url(#dots)"/>
 
-  <!-- Glowing orbs for depth -->
-  <circle cx="250" cy="150" r="300" fill="url(#glow1)"/>
-  <circle cx="950" cy="480" r="350" fill="url(#glow2)"/>
+  <!-- Glowing orbs for depth (non-overlapping positions) -->
+  <circle cx="200" cy="120" r="280" fill="url(#glow1)"/>
+  <circle cx="1000" cy="510" r="300" fill="url(#glow2)"/>
 
-  <!-- Main content area -->
+  <!-- Main content area with clear boundaries -->
   <g transform="translate(600, 315)">
     <!-- Container with subtle border -->
-    <rect x="-500" y="-200" width="1000" height="400" rx="20" fill="white" opacity="0.6"/>
-    <rect x="-500" y="-200" width="1000" height="400" rx="20" stroke="url(#orange-gradient)" stroke-width="2" opacity="0.3" fill="none"/>
+    <rect x="-480" y="-180" width="960" height="360" rx="20" fill="white" opacity="0.5"/>
+    <rect x="-480" y="-180" width="960" height="360" rx="20" stroke="url(#orange-gradient)" stroke-width="2" opacity="0.25" fill="none"/>
   </g>
 
-  <!-- Main heading -->
-  <text x="600" y="200" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="bold" fill="#1f2937" text-anchor="middle">
-    Pass Your Inburgering
-  </text>
-  <text x="600" y="270" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="bold" fill="#1f2937" text-anchor="middle">
-    Speaking Exam
+  <!-- Main heading - well spaced from container -->
+  <text x="600" y="210" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="bold" fill="#1f2937" text-anchor="middle" letter-spacing="-1">
+    Speak Fluent
   </text>
 
-  <!-- Accent line under heading -->
-  <rect x="350" y="285" width="500" height="4" rx="2" fill="url(#orange-gradient)"/>
+  <!-- Accent line under heading - centered and clear -->
+  <rect x="420" y="228" width="360" height="4" rx="2" fill="url(#orange-gradient)"/>
 
-  <!-- Subtitle -->
-  <text x="600" y="335" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="normal" fill="#6b7280" text-anchor="middle">
-    AI-powered Dutch speaking practice
+  <!-- Subtitle - clear spacing -->
+  <text x="600" y="285" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="normal" fill="#6b7280" text-anchor="middle">
+    Master Dutch Speaking for
+  </text>
+  <text x="600" y="320" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="normal" fill="#6b7280" text-anchor="middle">
+    Your Inburgering Exam
   </text>
 
-  <!-- Feature badges with icons -->
+  <!-- Feature badges with icons - well spaced, no overlap -->
 
   <!-- Badge 1: Target icon + 26+ Exercises -->
-  <g transform="translate(230, 385)">
-    <rect x="0" y="0" width="220" height="54" rx="27" fill="white" opacity="0.8"/>
+  <g transform="translate(250, 380)">
+    <rect x="0" y="0" width="220" height="54" rx="27" fill="white" opacity="0.9"/>
     <rect x="0" y="0" width="220" height="54" rx="27" stroke="url(#orange-gradient)" stroke-width="1.5" opacity="0.4" fill="none"/>
 
     <!-- Target icon -->
@@ -78,10 +78,10 @@
     </text>
   </g>
 
-  <!-- Badge 2: AI Brain icon + AI Feedback -->
-  <g transform="translate(470, 385)">
-    <rect x="0" y="0" width="210" height="54" rx="27" fill="white" opacity="0.8"/>
-    <rect x="0" y="0" width="210" height="54" rx="27" stroke="url(#orange-gradient)" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <!-- Badge 2: AI icon + AI Feedback -->
+  <g transform="translate(490, 380)">
+    <rect x="0" y="0" width="200" height="54" rx="27" fill="white" opacity="0.9"/>
+    <rect x="0" y="0" width="200" height="54" rx="27" stroke="url(#orange-gradient)" stroke-width="1.5" opacity="0.4" fill="none"/>
 
     <!-- AI Brain/Sparkle icon -->
     <circle cx="32" cy="27" r="9" stroke="#ea580c" stroke-width="2" fill="none"/>
@@ -89,14 +89,14 @@
     <circle cx="30" cy="24" r="1.5" fill="white"/>
     <circle cx="34" cy="24" r="1.5" fill="white"/>
 
-    <text x="105" y="35" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle">
+    <text x="100" y="35" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle">
       AI Feedback
     </text>
   </g>
 
   <!-- Badge 3: Infinity icon + Practice Tests -->
-  <g transform="translate(700, 385)">
-    <rect x="0" y="0" width="240" height="54" rx="27" fill="white" opacity="0.8"/>
+  <g transform="translate(710, 380)">
+    <rect x="0" y="0" width="240" height="54" rx="27" fill="white" opacity="0.9"/>
     <rect x="0" y="0" width="240" height="54" rx="27" stroke="url(#orange-gradient)" stroke-width="1.5" opacity="0.4" fill="none"/>
 
     <!-- Infinity icon -->
@@ -108,36 +108,15 @@
     </text>
   </g>
 
-  <!-- Bottom section -->
-  <g transform="translate(600, 480)">
-    <!-- Free to start badge -->
-    <g transform="translate(-200, 0)">
-      <rect x="0" y="0" width="160" height="40" rx="20" fill="url(#orange-gradient)" opacity="0.1"/>
-      <text x="80" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ea580c" text-anchor="middle">
-        Free to start
+  <!-- Bottom section - clear spacing from badges -->
+  <g transform="translate(600, 500)">
+    <!-- URL badge -->
+    <g transform="translate(-110, 0)">
+      <rect x="0" y="0" width="220" height="42" rx="21" fill="url(#orange-gradient)" opacity="0.12"/>
+      <rect x="0" y="0" width="220" height="42" rx="21" stroke="url(#orange-gradient)" stroke-width="1.5" opacity="0.3" fill="none"/>
+      <text x="110" y="28" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ea580c" text-anchor="middle">
+        speakfluent.app
       </text>
     </g>
-
-    <!-- Separator -->
-    <circle cx="0" cy="20" r="2.5" fill="#ea580c" opacity="0.3"/>
-
-    <!-- No credit card -->
-    <g transform="translate(40, 0)">
-      <rect x="0" y="0" width="230" height="40" rx="20" fill="url(#orange-gradient)" opacity="0.1"/>
-      <text x="115" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ea580c" text-anchor="middle">
-        No credit card required
-      </text>
-    </g>
-  </g>
-
-  <!-- App name and URL at bottom -->
-  <g transform="translate(600, 570)">
-    <text x="-80" y="0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#ea580c" text-anchor="end">
-      Speak Fluent
-    </text>
-    <circle cx="-55" cy="-4" r="2" fill="#d1d5db"/>
-    <text x="-30" y="0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" fill="#9ca3af" text-anchor="start">
-      speakfluent.app
-    </text>
   </g>
 </svg>
