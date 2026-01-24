@@ -3,6 +3,9 @@ import '../styles/global.css';
 
 const appName = "Speaking Dutch";
 const description = "Master Dutch speaking for your inburgering exam with AI-powered practice. 26+ exercises, unlimited tests, and instant feedback. Free to start!";
+const iosAppUrl = "https://apps.apple.com/us/app/speaking-dutch/id6499470406";
+const androidAppUrl = "https://play.google.com/store/apps/details?id=com.dutchspeaking.exam";
+const contactEmail = "langtoolsapp@gmail.com";
 ---
 
 <!DOCTYPE html>
@@ -45,7 +48,7 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 					<a href="#features" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Features</a>
 					<a href="#pricing" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
 					<a href="#faq" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors">
+					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors">
 						Download
 					</a>
 				</div>
@@ -63,14 +66,14 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 				AI-powered Dutch speaking practice with 26+ real exam exercises. Get instant pronunciation feedback and unlimited practice tests.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8">
-				<a href="https://apps.apple.com/app/speaking-dutch/id6738577743"
+				<a href={iosAppUrl} target="_blank" rel="noopener noreferrer"
 				   class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors min-w-[200px]">
 					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
 					</svg>
 					<span class="text-sm font-medium">Download on iOS</span>
 				</a>
-				<a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam"
+				<a href={androidAppUrl} target="_blank" rel="noopener noreferrer"
 				   class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors min-w-[200px]">
 					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
@@ -218,7 +221,7 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 							<span class="text-gray-700">Progress tracking</span>
 						</li>
 					</ul>
-					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
 						Get Started
 					</a>
 				</div>
@@ -268,7 +271,7 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 							<span>Gamification & achievements</span>
 						</li>
 					</ul>
-					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="block w-full text-center py-3 px-4 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 px-4 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
 						Start Free Trial
 					</a>
 				</div>
@@ -364,14 +367,14 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 			<h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to pass your exam?</h2>
 			<p class="text-lg text-orange-100 mb-8">Start practicing today with Speaking Dutch</p>
 			<div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-				<a href="https://apps.apple.com/app/speaking-dutch/id6738577743"
+				<a href={iosAppUrl} target="_blank" rel="noopener noreferrer"
 				   class="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-600 rounded-xl hover:bg-gray-50 transition-colors min-w-[200px] font-medium">
 					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
 					</svg>
 					<span class="text-sm">Download on iOS</span>
 				</a>
-				<a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam"
+				<a href={androidAppUrl} target="_blank" rel="noopener noreferrer"
 				   class="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-600 rounded-xl hover:bg-gray-50 transition-colors min-w-[200px] font-medium">
 					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
@@ -388,7 +391,13 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 			<div class="grid md:grid-cols-4 gap-8 mb-8">
 				<div class="md:col-span-2">
 					<h3 class="text-white font-semibold mb-3">Speaking Dutch</h3>
-					<p class="text-sm">Master Dutch speaking for your inburgering exam with AI-powered practice.</p>
+					<p class="text-sm mb-3">Master Dutch speaking for your inburgering exam with AI-powered practice.</p>
+					<a href={`mailto:${contactEmail}`} class="text-sm hover:text-white transition-colors inline-flex items-center">
+						<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+						</svg>
+						{contactEmail}
+					</a>
 				</div>
 				<div>
 					<h4 class="text-white font-medium mb-3 text-sm">Links</h4>
@@ -401,8 +410,8 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 				<div>
 					<h4 class="text-white font-medium mb-3 text-sm">Download</h4>
 					<ul class="space-y-2 text-sm">
-						<li><a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="hover:text-white transition-colors">iOS App</a></li>
-						<li><a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam" class="hover:text-white transition-colors">Android App</a></li>
+						<li><a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">iOS App</a></li>
+						<li><a href={androidAppUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Android App</a></li>
 					</ul>
 				</div>
 			</div>
