@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+/* Custom theme variables */
+@theme {
+  --color-primary: #ea580c;
+  --color-primary-dark: #c2410c;
+  --font-sans: 'Inter var', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

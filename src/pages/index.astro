@@ -1,10 +1,12 @@
 ---
+import '../styles/global.css';
+
 const appName = "Speaking Dutch";
-const description = "Master Dutch speaking for your inburgering exam with AI-powered practice. 26+ exercises, unlimited practice tests, and instant feedback. Free to start!";
+const description = "Master Dutch speaking for your inburgering exam with AI-powered practice. 26+ exercises, unlimited tests, and instant feedback. Free to start!";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,583 +28,385 @@ const description = "Master Dutch speaking for your inburgering exam with AI-pow
 	<meta property="twitter:description" content={description} />
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 antialiased" style="font-family: 'Inter', sans-serif;">
+
+	<!-- Navigation -->
+	<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<div class="flex items-center">
+					<span class="text-xl font-semibold text-gray-900">Speaking Dutch</span>
+				</div>
+				<div class="hidden md:flex items-center space-x-8">
+					<a href="#features" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+					<a href="#pricing" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+					<a href="#faq" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors">
+						Download
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 	<!-- Hero Section -->
-	<div class="bg-gradient-to-br from-orange-500 to-red-600 text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-			<div class="text-center">
-				<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-					Pass Your Inburgering Exam with Confidence
-				</h1>
-				<p class="text-xl sm:text-2xl mb-8 text-orange-50 max-w-3xl mx-auto">
-					Master Dutch speaking with AI-powered practice. 26+ exercises, unlimited tests, and instant feedback. Start free today!
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743"
-					   class="inline-flex items-center px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-900 transition-colors shadow-lg">
-						<svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-						</svg>
-						<div class="text-left">
-							<div class="text-xs">Download on the</div>
-							<div class="text-xl font-semibold">App Store</div>
-						</div>
-					</a>
-					<a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam"
-					   class="inline-flex items-center px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-900 transition-colors shadow-lg">
-						<svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-						</svg>
-						<div class="text-left">
-							<div class="text-xs">GET IT ON</div>
-							<div class="text-xl font-semibold">Google Play</div>
-						</div>
-					</a>
-				</div>
-				<p class="mt-6 text-orange-100">Free to start • No credit card required</p>
+	<section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-4xl mx-auto text-center">
+			<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+				Pass Your Inburgering<br/>Speaking Exam
+			</h1>
+			<p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+				AI-powered Dutch speaking practice with 26+ real exam exercises. Get instant pronunciation feedback and unlimited practice tests.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8">
+				<a href="https://apps.apple.com/app/speaking-dutch/id6738577743"
+				   class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors min-w-[200px]">
+					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+					</svg>
+					<span class="text-sm font-medium">Download on iOS</span>
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam"
+				   class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors min-w-[200px]">
+					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+					</svg>
+					<span class="text-sm font-medium">Download on Android</span>
+				</a>
 			</div>
+			<p class="text-sm text-gray-500">Free to start • No credit card required</p>
 		</div>
-	</div>
+	</section>
 
-	<!-- Problem vs Solution -->
-	<div class="py-20 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Stop Struggling with Traditional Methods</h2>
-			<div class="grid md:grid-cols-2 gap-8">
-				<!-- Problems -->
-				<div class="bg-white p-8 rounded-2xl shadow-md border-2 border-red-200">
-					<h3 class="text-2xl font-bold mb-6 text-red-600">Traditional Learning Problems</h3>
-					<ul class="space-y-4">
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-							</svg>
-							<span>Expensive classes (€500-1500) with limited speaking time</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-							</svg>
-							<span>No feedback on pronunciation until it's too late</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-							</svg>
-							<span>Fixed schedules that don't fit your life</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-							</svg>
-							<span>Anxiety speaking in front of others</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-							</svg>
-							<span>Limited practice opportunities before the exam</span>
-						</li>
-					</ul>
+	<!-- Stats -->
+	<section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+		<div class="max-w-4xl mx-auto">
+			<div class="grid grid-cols-3 gap-8 text-center">
+				<div>
+					<div class="text-3xl font-bold text-gray-900 mb-1">26+</div>
+					<div class="text-sm text-gray-600">Exam Exercises</div>
 				</div>
-
-				<!-- Solutions -->
-				<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-md border-2 border-green-400">
-					<h3 class="text-2xl font-bold mb-6 text-green-700">Speaking Dutch Solution</h3>
-					<ul class="space-y-4">
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>Start free, upgrade for just €9.99/month</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>AI speech recognition gives instant pronunciation feedback</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>Practice anytime, anywhere - fits your schedule</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>Practice privately without judgment</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>Unlimited practice tests - master every exercise</span>
-						</li>
-					</ul>
+				<div>
+					<div class="text-3xl font-bold text-gray-900 mb-1">AI</div>
+					<div class="text-sm text-gray-600">Speech Coach</div>
+				</div>
+				<div>
+					<div class="text-3xl font-bold text-gray-900 mb-1">∞</div>
+					<div class="text-sm text-gray-600">Practice Tests</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- Features Section -->
-	<div class="py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Everything You Need to Pass</h2>
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+	<section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-6xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Everything you need to pass</h2>
+				<p class="text-lg text-gray-600">Comprehensive exam preparation at your fingertips</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8">
 				<!-- Feature 1 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">26+ Real Exam Exercises</h3>
-					<p class="text-gray-600">All official exercises exactly as they appear in the actual inburgering speaking exam</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Real Exam Content</h3>
+					<p class="text-sm text-gray-600">All 26+ official exercises exactly as they appear in the actual exam</p>
 				</div>
 
 				<!-- Feature 2 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">AI Speech Coach</h3>
-					<p class="text-gray-600">Advanced speech recognition analyzes your pronunciation and gives instant, accurate feedback</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">AI Feedback</h3>
+					<p class="text-sm text-gray-600">Get instant pronunciation analysis and correction suggestions</p>
 				</div>
 
 				<!-- Feature 3 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">Unlimited Practice Tests</h3>
-					<p class="text-gray-600">Take full mock exams as many times as you need until you feel confident</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Unlimited Practice</h3>
+					<p class="text-sm text-gray-600">Take full mock exams as many times as you need</p>
 				</div>
 
 				<!-- Feature 4 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">Gamification & Rewards</h3>
-					<p class="text-gray-600">Earn points, unlock achievements, and stay motivated with engaging challenges</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Track Progress</h3>
+					<p class="text-sm text-gray-600">Monitor your improvement with detailed analytics</p>
 				</div>
 
 				<!-- Feature 5 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">Offline Mode</h3>
-					<p class="text-gray-600">Practice anywhere without internet connection - perfect for commuting</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Works Offline</h3>
+					<p class="text-sm text-gray-600">Practice anywhere without internet connection</p>
 				</div>
 
 				<!-- Feature 6 -->
-				<div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-					<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
 						</svg>
 					</div>
-					<h3 class="text-xl font-bold mb-2">Progress Tracking</h3>
-					<p class="text-gray-600">Monitor your improvement with detailed statistics and performance analytics</p>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Stay Motivated</h3>
+					<p class="text-sm text-gray-600">Earn achievements and unlock new challenges</p>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- Pricing Section -->
-	<div class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-			<p class="text-xl text-gray-600 text-center mb-16">Start for free. Upgrade when you're ready.</p>
+	<section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+		<div class="max-w-5xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple pricing</h2>
+				<p class="text-lg text-gray-600">Start for free. Upgrade when you're ready.</p>
+			</div>
 
-			<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+			<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 				<!-- Free Tier -->
-				<div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-200">
-					<h3 class="text-2xl font-bold mb-2">Free</h3>
-					<div class="mb-6">
-						<span class="text-4xl font-bold">€0</span>
-						<span class="text-gray-600">/forever</span>
+				<div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
+					<div class="mb-8">
+						<h3 class="text-xl font-semibold text-gray-900 mb-2">Free</h3>
+						<div class="flex items-baseline">
+							<span class="text-4xl font-bold text-gray-900">€0</span>
+							<span class="text-gray-500 ml-2">/forever</span>
+						</div>
 					</div>
-					<ul class="space-y-4 mb-8">
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
-							<span>4 practice exercises</span>
+							<span class="text-gray-700">4 practice exercises</span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
-							<span>AI pronunciation feedback</span>
+							<span class="text-gray-700">AI pronunciation feedback</span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
-							<span>Progress tracking</span>
+							<span class="text-gray-700">Progress tracking</span>
 						</li>
 					</ul>
-					<button class="w-full py-3 px-6 bg-gray-200 text-gray-800 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-						Start Free
-					</button>
+					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+						Get Started
+					</a>
 				</div>
 
 				<!-- Premium Tier -->
-				<div class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-xl border-2 border-orange-400 relative">
-					<div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+				<div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl p-8 text-white relative">
+					<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-900 px-3 py-1 rounded-full text-xs font-semibold">
 						MOST POPULAR
 					</div>
-					<h3 class="text-2xl font-bold mb-2">Premium</h3>
-					<div class="mb-6">
-						<span class="text-4xl font-bold">€9.99</span>
-						<span class="text-orange-100">/month</span>
+					<div class="mb-8">
+						<h3 class="text-xl font-semibold mb-2">Premium</h3>
+						<div class="flex items-baseline">
+							<span class="text-4xl font-bold">€9.99</span>
+							<span class="text-orange-200 ml-2">/month</span>
+						</div>
+						<p class="text-sm text-orange-200 mt-2">or €59.99/year (save 50%)</p>
 					</div>
-					<p class="text-orange-100 mb-4 text-sm">or €59.99/year (save 50%)</p>
-					<ul class="space-y-4 mb-8">
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-orange-200 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
 							<span><strong>All 26+ exercises</strong></span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-orange-200 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
 							<span><strong>Unlimited practice tests</strong></span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-							</svg>
-							<span>Advanced speech recognition</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-orange-200 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
 							<span>Offline mode</span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-orange-200 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
 							<span>Detailed analytics</span>
 						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-yellow-300 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-orange-200 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
 							<span>Gamification & achievements</span>
 						</li>
 					</ul>
-					<button class="w-full py-3 px-6 bg-white text-orange-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+					<a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="block w-full text-center py-3 px-4 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
 						Start Free Trial
-					</button>
+					</a>
+				</div>
+			</div>
+
+			<!-- Comparison with competitors -->
+			<div class="mt-16 text-center">
+				<p class="text-sm text-gray-600 mb-4">Compare with alternatives:</p>
+				<div class="inline-flex items-center gap-8 text-sm">
+					<div>
+						<div class="font-semibold text-gray-900">Speaking Dutch</div>
+						<div class="text-green-600 font-medium">€9.99/month</div>
+					</div>
+					<div class="text-gray-400">vs</div>
+					<div>
+						<div class="font-semibold text-gray-900">InburgeringOnline</div>
+						<div class="text-gray-600">€99-299</div>
+					</div>
+					<div class="text-gray-400">vs</div>
+					<div>
+						<div class="font-semibold text-gray-900">Classes</div>
+						<div class="text-gray-600">€500-1500</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Competitor Comparison -->
-	<div class="py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Why Choose Speaking Dutch?</h2>
-
-			<div class="overflow-x-auto">
-				<table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
-					<thead class="bg-gradient-to-r from-orange-500 to-red-600 text-white">
-						<tr>
-							<th class="px-6 py-4 text-left">Feature</th>
-							<th class="px-6 py-4 text-center font-bold">Speaking Dutch</th>
-							<th class="px-6 py-4 text-center">InburgeringOnline</th>
-							<th class="px-6 py-4 text-center">Traditional Classes</th>
-						</tr>
-					</thead>
-					<tbody class="divide-y divide-gray-200">
-						<tr>
-							<td class="px-6 py-4 font-medium">Price</td>
-							<td class="px-6 py-4 text-center text-green-600 font-bold">€9.99/month</td>
-							<td class="px-6 py-4 text-center">€99-299</td>
-							<td class="px-6 py-4 text-center">€500-1500</td>
-						</tr>
-						<tr class="bg-gray-50">
-							<td class="px-6 py-4 font-medium">Speaking Practice</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">Limited</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-						</tr>
-						<tr>
-							<td class="px-6 py-4 font-medium">AI Feedback</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-						</tr>
-						<tr class="bg-gray-50">
-							<td class="px-6 py-4 font-medium">Practice Anytime</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">Fixed Schedule</td>
-						</tr>
-						<tr>
-							<td class="px-6 py-4 font-medium">Offline Mode</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-red-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">N/A</td>
-						</tr>
-						<tr class="bg-gray-50">
-							<td class="px-6 py-4 font-medium">Unlimited Tests</td>
-							<td class="px-6 py-4 text-center">
-								<svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-							</td>
-							<td class="px-6 py-4 text-center">Limited</td>
-							<td class="px-6 py-4 text-center">Limited</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-
-	<!-- Social Proof / Testimonials -->
-	<div class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">What Our Users Say</h2>
-
-			<div class="grid md:grid-cols-3 gap-8">
-				<!-- Testimonial 1 -->
-				<div class="bg-white p-6 rounded-xl shadow-lg">
-					<div class="flex items-center mb-4">
-						<div class="flex text-yellow-400">
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-						</div>
-					</div>
-					<p class="text-gray-700 mb-4">"I passed my exam on the first try! The AI feedback helped me fix my pronunciation mistakes. Much better than expensive classes."</p>
-					<p class="font-semibold">- Ahmed K.</p>
-					<p class="text-sm text-gray-500">Rotterdam</p>
-				</div>
-
-				<!-- Testimonial 2 -->
-				<div class="bg-white p-6 rounded-xl shadow-lg">
-					<div class="flex items-center mb-4">
-						<div class="flex text-yellow-400">
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-						</div>
-					</div>
-					<p class="text-gray-700 mb-4">"Being able to practice on my commute made all the difference. The offline mode is perfect for the train."</p>
-					<p class="font-semibold">- Maria S.</p>
-					<p class="text-sm text-gray-500">Amsterdam</p>
-				</div>
-
-				<!-- Testimonial 3 -->
-				<div class="bg-white p-6 rounded-xl shadow-lg">
-					<div class="flex items-center mb-4">
-						<div class="flex text-yellow-400">
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-						</div>
-					</div>
-					<p class="text-gray-700 mb-4">"So much cheaper than online courses and way more effective. The instant feedback is a game changer."</p>
-					<p class="font-semibold">- Priya T.</p>
-					<p class="text-sm text-gray-500">Utrecht</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	</section>
 
 	<!-- FAQ Section -->
-	<div class="py-20 bg-white">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+	<section id="faq" class="py-20 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently asked questions</h2>
+			</div>
 
-			<div class="space-y-6">
-				<!-- FAQ 1 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						Is the app really free to start?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<div class="space-y-4">
+				<details class="group bg-gray-50 rounded-lg p-6">
+					<summary class="flex justify-between items-center cursor-pointer list-none">
+						<span class="font-medium text-gray-900">Is the app really free to start?</span>
+						<svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</summary>
-					<p class="mt-4 text-gray-600">Yes! You get 4 practice exercises completely free with AI feedback and progress tracking. You can upgrade to Premium anytime to unlock all 26+ exercises and unlimited practice tests.</p>
+					<p class="mt-4 text-sm text-gray-600 leading-relaxed">Yes! You get 4 practice exercises completely free with AI feedback and progress tracking. You can upgrade to Premium anytime to unlock all 26+ exercises and unlimited practice tests.</p>
 				</details>
 
-				<!-- FAQ 2 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						How accurate is the AI speech recognition?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<details class="group bg-gray-50 rounded-lg p-6">
+					<summary class="flex justify-between items-center cursor-pointer list-none">
+						<span class="font-medium text-gray-900">Will this prepare me for the real exam?</span>
+						<svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</summary>
-					<p class="mt-4 text-gray-600">Our AI uses advanced speech recognition technology specifically trained for Dutch pronunciation. It provides accurate, instant feedback on your speaking, helping you identify and correct mistakes immediately.</p>
+					<p class="mt-4 text-sm text-gray-600 leading-relaxed">Absolutely! All 26+ exercises are taken directly from the official inburgering speaking exam. You'll practice the exact same questions and format you'll encounter on test day.</p>
 				</details>
 
-				<!-- FAQ 3 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						Will this app prepare me for the real exam?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<details class="group bg-gray-50 rounded-lg p-6">
+					<summary class="flex justify-between items-center cursor-pointer list-none">
+						<span class="font-medium text-gray-900">How accurate is the AI speech recognition?</span>
+						<svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</summary>
-					<p class="mt-4 text-gray-600">Absolutely! All 26+ exercises are taken directly from the official inburgering speaking exam. You'll practice the exact same questions and format you'll encounter on test day.</p>
+					<p class="mt-4 text-sm text-gray-600 leading-relaxed">Our AI uses advanced speech recognition technology specifically trained for Dutch pronunciation. It provides accurate, instant feedback on your speaking, helping you identify and correct mistakes immediately.</p>
 				</details>
 
-				<!-- FAQ 4 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						Can I use the app offline?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<details class="group bg-gray-50 rounded-lg p-6">
+					<summary class="flex justify-between items-center cursor-pointer list-none">
+						<span class="font-medium text-gray-900">Can I use the app offline?</span>
+						<svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</summary>
-					<p class="mt-4 text-gray-600">Yes! Premium users can download exercises and practice offline - perfect for commuting or areas with poor internet connection.</p>
+					<p class="mt-4 text-sm text-gray-600 leading-relaxed">Yes! Premium users can download exercises and practice offline - perfect for commuting or areas with poor internet connection.</p>
 				</details>
 
-				<!-- FAQ 5 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						How do I cancel my subscription?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<details class="group bg-gray-50 rounded-lg p-6">
+					<summary class="flex justify-between items-center cursor-pointer list-none">
+						<span class="font-medium text-gray-900">How do I cancel my subscription?</span>
+						<svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</summary>
-					<p class="mt-4 text-gray-600">You can cancel anytime through your App Store (iOS) or Google Play (Android) subscription settings. No questions asked, no hidden fees.</p>
-				</details>
-
-				<!-- FAQ 6 -->
-				<details class="bg-gray-50 rounded-xl p-6 cursor-pointer group">
-					<summary class="font-semibold text-lg flex justify-between items-center">
-						Is there a money-back guarantee?
-						<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-						</svg>
-					</summary>
-					<p class="mt-4 text-gray-600">Since you can start completely free and try the app before paying, we don't offer refunds. However, you can cancel your subscription at any time to avoid future charges.</p>
+					<p class="mt-4 text-sm text-gray-600 leading-relaxed">You can cancel anytime through your App Store (iOS) or Google Play (Android) subscription settings. No questions asked, no hidden fees.</p>
 				</details>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- Final CTA -->
-	<div class="py-20 bg-gradient-to-br from-orange-500 to-red-600 text-white">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Pass Your Inburgering Exam?</h2>
-			<p class="text-xl mb-8 text-orange-50">Join hundreds of students who've passed with Speaking Dutch</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+	<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
+		<div class="max-w-3xl mx-auto text-center">
+			<h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to pass your exam?</h2>
+			<p class="text-lg text-orange-100 mb-8">Start practicing today with Speaking Dutch</p>
+			<div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
 				<a href="https://apps.apple.com/app/speaking-dutch/id6738577743"
-				   class="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
-					<svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+				   class="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-600 rounded-xl hover:bg-gray-50 transition-colors min-w-[200px] font-medium">
+					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
 					</svg>
-					<div class="text-left">
-						<div class="text-xs text-orange-600">Download on the</div>
-						<div class="text-xl font-semibold">App Store</div>
-					</div>
+					<span class="text-sm">Download on iOS</span>
 				</a>
 				<a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam"
-				   class="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
-					<svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+				   class="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-600 rounded-xl hover:bg-gray-50 transition-colors min-w-[200px] font-medium">
+					<svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
 					</svg>
-					<div class="text-left">
-						<div class="text-xs text-orange-600">GET IT ON</div>
-						<div class="text-xl font-semibold">Google Play</div>
-					</div>
+					<span class="text-sm">Download on Android</span>
 				</a>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- Footer -->
-	<footer class="bg-gray-900 text-gray-300 py-12">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid md:grid-cols-3 gap-8">
-				<div>
-					<h3 class="text-white font-bold text-lg mb-4">Speaking Dutch</h3>
+	<footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid md:grid-cols-4 gap-8 mb-8">
+				<div class="md:col-span-2">
+					<h3 class="text-white font-semibold mb-3">Speaking Dutch</h3>
 					<p class="text-sm">Master Dutch speaking for your inburgering exam with AI-powered practice.</p>
 				</div>
 				<div>
-					<h4 class="text-white font-semibold mb-4">Quick Links</h4>
+					<h4 class="text-white font-medium mb-3 text-sm">Links</h4>
 					<ul class="space-y-2 text-sm">
-						<li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-						<li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-						<li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+						<li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+						<li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+						<li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
 					</ul>
 				</div>
 				<div>
-					<h4 class="text-white font-semibold mb-4">Download</h4>
+					<h4 class="text-white font-medium mb-3 text-sm">Download</h4>
 					<ul class="space-y-2 text-sm">
 						<li><a href="https://apps.apple.com/app/speaking-dutch/id6738577743" class="hover:text-white transition-colors">iOS App</a></li>
 						<li><a href="https://play.google.com/store/apps/details?id=com.dutchspeaking.exam" class="hover:text-white transition-colors">Android App</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+			<div class="border-t border-gray-800 pt-8 text-center text-sm">
 				<p>&copy; 2025 Speaking Dutch. All rights reserved.</p>
 			</div>
 		</div>
