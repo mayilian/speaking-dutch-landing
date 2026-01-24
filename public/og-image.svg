@@ -1,39 +1,105 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Gradient Background -->
+  <!-- Modern Gradient Background -->
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
     </linearGradient>
+
+    <!-- Glow effects -->
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f472b6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Mesh gradient effect -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend mode="multiply" in2="SourceGraphic"/>
+    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <!-- Base gradient background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
 
-  <!-- Decorative circles -->
-  <circle cx="100" cy="100" r="200" fill="white" opacity="0.05"/>
-  <circle cx="1100" cy="530" r="250" fill="white" opacity="0.05"/>
+  <!-- Noise texture overlay for depth -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)" filter="url(#noise)" opacity="0.03"/>
 
-  <!-- Main Content -->
-  <text x="600" y="240" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">
-    SpeakFluent
+  <!-- Glowing orbs for modern tech feel -->
+  <circle cx="200" cy="150" r="300" fill="url(#glow1)"/>
+  <circle cx="1000" cy="500" r="350" fill="url(#glow2)"/>
+  <circle cx="600" cy="300" r="250" fill="url(#glow3)"/>
+
+  <!-- Geometric accent lines -->
+  <path d="M0,200 L300,100 L600,250 L900,150 L1200,300" stroke="white" stroke-width="2" opacity="0.1" fill="none"/>
+  <path d="M0,400 L400,350 L800,450 L1200,380" stroke="white" stroke-width="2" opacity="0.1" fill="none"/>
+
+  <!-- Floating particles -->
+  <circle cx="150" cy="250" r="3" fill="white" opacity="0.4"/>
+  <circle cx="280" cy="420" r="2" fill="white" opacity="0.3"/>
+  <circle cx="950" cy="180" r="4" fill="white" opacity="0.5"/>
+  <circle cx="1100" cy="350" r="3" fill="white" opacity="0.4"/>
+  <circle cx="450" cy="520" r="2" fill="white" opacity="0.3"/>
+  <circle cx="750" cy="100" r="3" fill="white" opacity="0.4"/>
+
+  <!-- Main content container with glass morphism effect -->
+  <rect x="100" y="180" width="1000" height="300" rx="24" fill="white" opacity="0.08"/>
+  <rect x="100" y="180" width="1000" height="300" rx="24" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+
+  <!-- Main heading with modern spacing -->
+  <text x="600" y="280" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="80" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-2">
+    Speak Fluent
   </text>
 
-  <text x="600" y="320" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="36" font-weight="400" fill="white" fill-opacity="0.9" text-anchor="middle">
-    Master Dutch Speaking for
+  <!-- Subtitle with gradient -->
+  <text x="600" y="340" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="32" font-weight="500" fill="white" fill-opacity="0.95" text-anchor="middle" letter-spacing="-0.5">
+    Master Dutch Speaking with AI
   </text>
 
-  <text x="600" y="380" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="36" font-weight="400" fill="white" fill-opacity="0.9" text-anchor="middle">
-    Your Inburgering Exam
+  <!-- Feature badges with modern pill design -->
+  <g transform="translate(280, 390)">
+    <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
+    <text x="90" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+      🎯 26+ Tests
+    </text>
+  </g>
+
+  <g transform="translate(490, 390)">
+    <rect x="0" y="0" width="220" height="48" rx="24" fill="white" opacity="0.15"/>
+    <text x="110" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+      🤖 AI Powered
+    </text>
+  </g>
+
+  <g transform="translate(740, 390)">
+    <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
+    <text x="90" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
+      ∞ Practice
+    </text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="540" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="22" font-weight="400" fill="white" fill-opacity="0.75" text-anchor="middle">
+    Ace Your Inburgering Exam • Free to Start
   </text>
 
-  <!-- Features -->
-  <text x="600" y="470" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="24" font-weight="500" fill="white" fill-opacity="0.85" text-anchor="middle">
-    🎯 26+ Exercises  •  🤖 AI Feedback  •  ∞ Practice Tests
-  </text>
-
-  <!-- Bottom text -->
-  <text x="600" y="550" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="white" fill-opacity="0.7" text-anchor="middle">
-    Free to start • Available on iOS &amp; Android
-  </text>
+  <!-- Modern URL badge -->
+  <g transform="translate(490, 560)">
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="black" opacity="0.2"/>
+    <text x="110" y="24" font-family="'SF Mono', 'Consolas', monospace" font-size="16" font-weight="500" fill="white" fill-opacity="0.9" text-anchor="middle">
+      speakfluent.app
+    </text>
+  </g>
 </svg>
