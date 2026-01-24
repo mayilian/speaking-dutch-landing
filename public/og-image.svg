@@ -2,104 +2,146 @@
   <!-- Modern Gradient Background -->
   <defs>
     <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent gradient -->
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d946ef;stop-opacity:1" />
     </linearGradient>
 
     <!-- Glow effects -->
     <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
     </radialGradient>
 
     <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#d946ef;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#d946ef;stop-opacity:0" />
     </radialGradient>
 
     <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#f472b6;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0" />
     </radialGradient>
 
-    <!-- Mesh gradient effect -->
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feBlend mode="multiply" in2="SourceGraphic"/>
-    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/>
+    </pattern>
   </defs>
 
   <!-- Base gradient background -->
   <rect width="1200" height="630" fill="url(#bg-gradient)"/>
 
-  <!-- Noise texture overlay for depth -->
-  <rect width="1200" height="630" fill="url(#bg-gradient)" filter="url(#noise)" opacity="0.03"/>
+  <!-- Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)"/>
 
   <!-- Glowing orbs for modern tech feel -->
-  <circle cx="200" cy="150" r="300" fill="url(#glow1)"/>
-  <circle cx="1000" cy="500" r="350" fill="url(#glow2)"/>
-  <circle cx="600" cy="300" r="250" fill="url(#glow3)"/>
+  <circle cx="200" cy="150" r="250" fill="url(#glow1)"/>
+  <circle cx="1050" cy="480" r="300" fill="url(#glow2)"/>
+  <circle cx="600" cy="320" r="200" fill="url(#glow3)"/>
 
-  <!-- Geometric accent lines -->
-  <path d="M0,200 L300,100 L600,250 L900,150 L1200,300" stroke="white" stroke-width="2" opacity="0.1" fill="none"/>
-  <path d="M0,400 L400,350 L800,450 L1200,380" stroke="white" stroke-width="2" opacity="0.1" fill="none"/>
+  <!-- Decorative elements -->
+  <circle cx="180" cy="80" r="4" fill="url(#accent-gradient)" opacity="0.6"/>
+  <circle cx="1050" cy="120" r="6" fill="url(#accent-gradient)" opacity="0.5"/>
+  <circle cx="950" cy="550" r="3" fill="url(#accent-gradient)" opacity="0.7"/>
+  <circle cx="250" cy="500" r="5" fill="url(#accent-gradient)" opacity="0.4"/>
 
-  <!-- Floating particles -->
-  <circle cx="150" cy="250" r="3" fill="white" opacity="0.4"/>
-  <circle cx="280" cy="420" r="2" fill="white" opacity="0.3"/>
-  <circle cx="950" cy="180" r="4" fill="white" opacity="0.5"/>
-  <circle cx="1100" cy="350" r="3" fill="white" opacity="0.4"/>
-  <circle cx="450" cy="520" r="2" fill="white" opacity="0.3"/>
-  <circle cx="750" cy="100" r="3" fill="white" opacity="0.4"/>
+  <!-- Main content container -->
+  <g transform="translate(600, 315)">
+    <!-- Glass morphism container -->
+    <rect x="-480" y="-180" width="960" height="360" rx="24" fill="white" opacity="0.03"/>
+    <rect x="-480" y="-180" width="960" height="360" rx="24" stroke="url(#accent-gradient)" stroke-width="1.5" opacity="0.3" fill="none"/>
 
-  <!-- Main content container with glass morphism effect -->
-  <rect x="100" y="180" width="1000" height="300" rx="24" fill="white" opacity="0.08"/>
-  <rect x="100" y="180" width="1000" height="300" rx="24" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+    <!-- Top accent line -->
+    <line x1="-480" y1="-140" x2="480" y2="-140" stroke="url(#accent-gradient)" stroke-width="1" opacity="0.2"/>
+  </g>
 
-  <!-- Main heading with modern spacing -->
-  <text x="600" y="280" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">
+  <!-- Main heading -->
+  <text x="600" y="230" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="-1">
     Speak Fluent
   </text>
 
-  <!-- Subtitle with gradient -->
-  <text x="600" y="340" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="normal" fill="white" fill-opacity="0.95" text-anchor="middle">
+  <!-- Accent underline -->
+  <rect x="450" y="245" width="300" height="3" rx="1.5" fill="url(#accent-gradient)" opacity="0.6"/>
+
+  <!-- Subtitle -->
+  <text x="600" y="300" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="normal" fill="white" fill-opacity="0.85" text-anchor="middle">
     Master Dutch Speaking with AI
   </text>
 
-  <!-- Feature badges with modern pill design -->
-  <g transform="translate(280, 390)">
-    <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="90" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+  <!-- Feature badges with icons -->
+
+  <!-- Badge 1: Target icon + 26+ Tests -->
+  <g transform="translate(240, 360)">
+    <rect x="0" y="0" width="240" height="56" rx="28" fill="white" opacity="0.08"/>
+    <rect x="0" y="0" width="240" height="56" rx="28" stroke="white" stroke-width="1" opacity="0.15" fill="none"/>
+
+    <!-- Target icon -->
+    <circle cx="35" cy="28" r="10" stroke="url(#accent-gradient)" stroke-width="2" fill="none"/>
+    <circle cx="35" cy="28" r="5" fill="url(#accent-gradient)"/>
+
+    <text x="120" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
       26+ Tests
     </text>
   </g>
 
-  <g transform="translate(490, 390)">
-    <rect x="0" y="0" width="220" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="110" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+  <!-- Badge 2: AI Brain icon + AI Powered -->
+  <g transform="translate(500, 360)">
+    <rect x="0" y="0" width="260" height="56" rx="28" fill="white" opacity="0.08"/>
+    <rect x="0" y="0" width="260" height="56" rx="28" stroke="white" stroke-width="1" opacity="0.15" fill="none"/>
+
+    <!-- AI Brain icon -->
+    <circle cx="40" cy="28" r="10" stroke="url(#accent-gradient)" stroke-width="2" fill="none"/>
+    <path d="M 32 28 L 40 22 L 48 28 L 40 34 Z" fill="url(#accent-gradient)"/>
+    <circle cx="37" cy="25" r="1.5" fill="white"/>
+    <circle cx="43" cy="25" r="1.5" fill="white"/>
+
+    <text x="130" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
       AI Powered
     </text>
   </g>
 
-  <g transform="translate(740, 390)">
-    <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="90" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
-      Practice
+  <!-- Badge 3: Infinity icon + Unlimited -->
+  <g transform="translate(780, 360)">
+    <rect x="0" y="0" width="240" height="56" rx="28" fill="white" opacity="0.08"/>
+    <rect x="0" y="0" width="240" height="56" rx="28" stroke="white" stroke-width="1" opacity="0.15" fill="none"/>
+
+    <!-- Infinity icon -->
+    <path d="M 26 28 C 26 23 29 20 33 20 C 37 20 40 23 40 28 C 40 33 43 36 47 36 C 51 36 54 33 54 28 C 54 23 51 20 47 20 C 43 20 40 23 40 28 C 40 33 37 36 33 36 C 29 36 26 33 26 28 Z"
+          stroke="url(#accent-gradient)" stroke-width="2.5" fill="none"/>
+
+    <text x="120" y="36" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      Unlimited
     </text>
   </g>
 
-  <!-- Bottom tagline -->
-  <text x="600" y="540" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="normal" fill="white" fill-opacity="0.75" text-anchor="middle">
-    Ace Your Inburgering Exam - Free to Start
-  </text>
-
-  <!-- Modern URL badge -->
-  <g transform="translate(490, 560)">
-    <rect x="0" y="0" width="220" height="36" rx="18" fill="black" opacity="0.2"/>
-    <text x="110" y="24" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="white" fill-opacity="0.9" text-anchor="middle">
-      speakfluent.app
+  <!-- Bottom section -->
+  <g transform="translate(600, 470)">
+    <!-- Tagline -->
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="normal" fill="white" fill-opacity="0.7" text-anchor="middle">
+      Ace Your Inburgering Exam
     </text>
+
+    <!-- Separator dot -->
+    <circle cx="0" cy="28" r="2" fill="url(#accent-gradient)" opacity="0.6"/>
+
+    <!-- Free to start -->
+    <text x="0" y="50" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="white" fill-opacity="0.5" text-anchor="middle">
+      Free to Start
+    </text>
+
+    <!-- URL badge -->
+    <g transform="translate(-110, 70)">
+      <rect x="0" y="0" width="220" height="38" rx="19" fill="url(#accent-gradient)" opacity="0.15"/>
+      <rect x="0" y="0" width="220" height="38" rx="19" stroke="url(#accent-gradient)" stroke-width="1" opacity="0.4" fill="none"/>
+      <text x="110" y="25" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="white" fill-opacity="0.9" text-anchor="middle">
+        speakfluent.app
+      </text>
+    </g>
   </g>
 </svg>
