@@ -1,11 +1,13 @@
 ---
 import '../styles/global.css';
 
-const appName = "Speaking Dutch";
+const appName = "SpeakFluent";
 const description = "Master Dutch speaking for your inburgering exam with AI-powered practice. 26+ exercises, unlimited tests, and instant feedback. Free to start!";
 const iosAppUrl = "https://apps.apple.com/us/app/speaking-dutch/id6499470406";
 const androidAppUrl = "https://play.google.com/store/apps/details?id=com.dutchspeaking.exam";
 const contactEmail = "langtoolsapp@gmail.com";
+const siteUrl = "https://speakfluent.app";
+const ogImage = `${siteUrl}/og-image.svg`;
 ---
 
 <!DOCTYPE html>
@@ -22,13 +24,21 @@ const contactEmail = "langtoolsapp@gmail.com";
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
+	<meta property="og:url" content={siteUrl} />
 	<meta property="og:title" content={`${appName} - Master Dutch Speaking for Inburgering Exam`} />
 	<meta property="og:description" content={description} />
+	<meta property="og:image" content={ogImage} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="SpeakFluent - Master Dutch Speaking for Your Inburgering Exam" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={siteUrl} />
 	<meta property="twitter:title" content={`${appName} - Master Dutch Speaking for Inburgering Exam`} />
 	<meta property="twitter:description" content={description} />
+	<meta property="twitter:image" content={ogImage} />
+	<meta property="twitter:image:alt" content="SpeakFluent - Master Dutch Speaking for Your Inburgering Exam" />
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +52,7 @@ const contactEmail = "langtoolsapp@gmail.com";
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center">
-					<span class="text-xl font-semibold text-gray-900">Speaking Dutch</span>
+					<span class="text-xl font-semibold text-gray-900">SpeakFluent</span>
 				</div>
 				<div class="hidden md:flex items-center space-x-8">
 					<a href="#features" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Features</a>
@@ -282,7 +292,7 @@ const contactEmail = "langtoolsapp@gmail.com";
 				<p class="text-sm text-gray-600 mb-4">Compare with alternatives:</p>
 				<div class="inline-flex items-center gap-8 text-sm">
 					<div>
-						<div class="font-semibold text-gray-900">Speaking Dutch</div>
+						<div class="font-semibold text-gray-900">SpeakFluent</div>
 						<div class="text-green-600 font-medium">€9.99/month</div>
 					</div>
 					<div class="text-gray-400">vs</div>
@@ -365,7 +375,7 @@ const contactEmail = "langtoolsapp@gmail.com";
 	<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
 		<div class="max-w-3xl mx-auto text-center">
 			<h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to pass your exam?</h2>
-			<p class="text-lg text-orange-100 mb-8">Start practicing today with Speaking Dutch</p>
+			<p class="text-lg text-orange-100 mb-8">Start practicing today with SpeakFluent</p>
 			<div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
 				<a href={iosAppUrl} target="_blank" rel="noopener noreferrer"
 				   class="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-600 rounded-xl hover:bg-gray-50 transition-colors min-w-[200px] font-medium">
@@ -390,7 +400,7 @@ const contactEmail = "langtoolsapp@gmail.com";
 		<div class="max-w-6xl mx-auto">
 			<div class="grid md:grid-cols-4 gap-8 mb-8">
 				<div class="md:col-span-2">
-					<h3 class="text-white font-semibold mb-3">Speaking Dutch</h3>
+					<h3 class="text-white font-semibold mb-3">SpeakFluent</h3>
 					<p class="text-sm mb-3">Master Dutch speaking for your inburgering exam with AI-powered practice.</p>
 					<a href={`mailto:${contactEmail}`} class="text-sm hover:text-white transition-colors inline-flex items-center">
 						<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -416,7 +426,7 @@ const contactEmail = "langtoolsapp@gmail.com";
 				</div>
 			</div>
 			<div class="border-t border-gray-800 pt-8 text-center text-sm">
-				<p>&copy; 2025 Speaking Dutch. All rights reserved.</p>
+				<p>&copy; 2025 SpeakFluent. All rights reserved.</p>
 			</div>
 		</div>
 	</footer>
