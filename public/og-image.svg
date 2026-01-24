@@ -59,46 +59,46 @@
   <rect x="100" y="180" width="1000" height="300" rx="24" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
 
   <!-- Main heading with modern spacing -->
-  <text x="600" y="280" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="80" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-2">
+  <text x="600" y="280" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">
     Speak Fluent
   </text>
 
   <!-- Subtitle with gradient -->
-  <text x="600" y="340" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="32" font-weight="500" fill="white" fill-opacity="0.95" text-anchor="middle" letter-spacing="-0.5">
+  <text x="600" y="340" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="normal" fill="white" fill-opacity="0.95" text-anchor="middle">
     Master Dutch Speaking with AI
   </text>
 
   <!-- Feature badges with modern pill design -->
   <g transform="translate(280, 390)">
     <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="90" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
-      🎯 26+ Tests
+    <text x="90" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      26+ Tests
     </text>
   </g>
 
   <g transform="translate(490, 390)">
     <rect x="0" y="0" width="220" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="110" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
-      🤖 AI Powered
+    <text x="110" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      AI Powered
     </text>
   </g>
 
   <g transform="translate(740, 390)">
     <rect x="0" y="0" width="180" height="48" rx="24" fill="white" opacity="0.15"/>
-    <text x="90" y="32" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle">
-      ∞ Practice
+    <text x="90" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      Practice
     </text>
   </g>
 
   <!-- Bottom tagline -->
-  <text x="600" y="540" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="22" font-weight="400" fill="white" fill-opacity="0.75" text-anchor="middle">
-    Ace Your Inburgering Exam • Free to Start
+  <text x="600" y="540" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="normal" fill="white" fill-opacity="0.75" text-anchor="middle">
+    Ace Your Inburgering Exam - Free to Start
   </text>
 
   <!-- Modern URL badge -->
   <g transform="translate(490, 560)">
     <rect x="0" y="0" width="220" height="36" rx="18" fill="black" opacity="0.2"/>
-    <text x="110" y="24" font-family="'SF Mono', 'Consolas', monospace" font-size="16" font-weight="500" fill="white" fill-opacity="0.9" text-anchor="middle">
+    <text x="110" y="24" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="white" fill-opacity="0.9" text-anchor="middle">
       speakfluent.app
     </text>
   </g>
