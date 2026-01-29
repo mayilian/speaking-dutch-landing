@@ -1,0 +1,116 @@
+---
+import '../styles/global.css';
+
+const appName = "Speak Fluent";
+const siteUrl = "https://speakfluent.app";
+const contactEmail = "langtoolsapp@gmail.com";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Privacy Policy - {appName}</title>
+	<meta name="description" content="Privacy Policy for SpeakFluent Dutch language learning app" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 antialiased" style="font-family: 'Inter', sans-serif;">
+
+	<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<a href="/" class="text-xl font-semibold text-gray-900 hover:text-orange-600 transition-colors">SpeakFluent</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto prose prose-gray">
+			<h1 class="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+			<p class="text-sm text-gray-500 mb-8">Last updated: January 29, 2026</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">1. Introduction</h2>
+			<p class="text-gray-600 mb-4">SpeakFluent ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our Dutch language learning app ("App").</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">2. Information We Collect</h2>
+
+			<h3 class="text-lg font-medium text-gray-900 mt-6 mb-2">Information you provide</h3>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li><strong>Account information:</strong> If you choose to sign in, we receive your name and email address from Apple or Google sign-in. Account creation is optional.</li>
+				<li><strong>Voice recordings:</strong> When you use speaking exercises, your voice is recorded temporarily for speech recognition and pronunciation feedback. Recordings are processed in real-time and are not permanently stored on our servers.</li>
+			</ul>
+
+			<h3 class="text-lg font-medium text-gray-900 mt-6 mb-2">Information collected automatically</h3>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li><strong>Usage data:</strong> Exercise progress, scores, and activity data to provide personalized learning experiences.</li>
+				<li><strong>Device information:</strong> Device type, operating system, and app version for compatibility and troubleshooting.</li>
+				<li><strong>Subscription status:</strong> Purchase and subscription information managed through Apple App Store or Google Play Store.</li>
+			</ul>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">3. How We Use Your Information</h2>
+			<p class="text-gray-600 mb-4">We use your information to:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li>Provide and improve the App's language learning features</li>
+				<li>Process voice input for speech recognition and pronunciation feedback</li>
+				<li>Track your learning progress and provide personalized recommendations</li>
+				<li>Manage your subscription and purchases</li>
+				<li>Respond to support requests</li>
+			</ul>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">4. Microphone and Speech Data</h2>
+			<p class="text-gray-600 mb-4">The App uses your device's microphone to record your voice during speaking exercises. This data is used to:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li>Transcribe your spoken Dutch answers</li>
+				<li>Provide AI-powered pronunciation feedback</li>
+				<li>Compare your answers with expected responses</li>
+			</ul>
+			<p class="text-gray-600 mb-4">Voice recordings are processed in real-time and are not permanently stored on our servers. You can deny microphone access at any time through your device settings, though this will limit the App's speaking practice features.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">5. Data Sharing</h2>
+			<p class="text-gray-600 mb-4">We do not sell your personal information. We may share data with:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li><strong>Service providers:</strong> Cloud hosting and speech recognition services that process data on our behalf.</li>
+				<li><strong>Payment processors:</strong> Apple and Google handle all payment processing for subscriptions.</li>
+				<li><strong>RevenueCat:</strong> Subscription management platform that processes anonymous purchase data.</li>
+			</ul>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">6. Data Storage and Security</h2>
+			<p class="text-gray-600 mb-4">Your data is stored securely using industry-standard encryption. Learning progress is stored locally on your device and synced to our servers when you are signed in. We use AWS cloud infrastructure with appropriate security measures.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">7. Your Rights</h2>
+			<p class="text-gray-600 mb-4">You have the right to:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li>Access your personal data</li>
+				<li>Request deletion of your account and data</li>
+				<li>Opt out of optional data collection</li>
+				<li>Use the App without creating an account</li>
+			</ul>
+			<p class="text-gray-600 mb-4">To exercise these rights, contact us at <a href={`mailto:${contactEmail}`} class="text-orange-600 hover:text-orange-700">{contactEmail}</a> or use the "Delete Account" option in the App's settings.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">8. Children's Privacy</h2>
+			<p class="text-gray-600 mb-4">The App is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">9. Changes to This Policy</h2>
+			<p class="text-gray-600 mb-4">We may update this Privacy Policy from time to time. We will notify you of significant changes through the App or by updating the date at the top of this page.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">10. Contact</h2>
+			<p class="text-gray-600 mb-4">For questions about this Privacy Policy, contact us at <a href={`mailto:${contactEmail}`} class="text-orange-600 hover:text-orange-700">{contactEmail}</a>.</p>
+		</div>
+	</main>
+
+	<footer class="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto text-center text-sm">
+			<div class="flex justify-center space-x-6 mb-4">
+				<a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+				<a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+			</div>
+			<p>&copy; 2025 SpeakFluent. All rights reserved.</p>
+		</div>
+	</footer>
+
+</body>
+</html>

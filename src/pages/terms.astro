@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+
+const appName = "Speak Fluent";
+const siteUrl = "https://speakfluent.app";
+const contactEmail = "langtoolsapp@gmail.com";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Terms of Use - {appName}</title>
+	<meta name="description" content="Terms of Use for SpeakFluent Dutch language learning app" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 antialiased" style="font-family: 'Inter', sans-serif;">
+
+	<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<a href="/" class="text-xl font-semibold text-gray-900 hover:text-orange-600 transition-colors">SpeakFluent</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto prose prose-gray">
+			<h1 class="text-3xl font-bold text-gray-900 mb-2">Terms of Use</h1>
+			<p class="text-sm text-gray-500 mb-8">Last updated: January 29, 2026</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">1. Acceptance of Terms</h2>
+			<p class="text-gray-600 mb-4">By downloading, installing, or using the SpeakFluent app ("App"), you agree to be bound by these Terms of Use. If you do not agree, do not use the App.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">2. Description of Service</h2>
+			<p class="text-gray-600 mb-4">SpeakFluent is a Dutch language learning application designed to help users prepare for the inburgering speaking exam. The App provides AI-powered speaking exercises, pronunciation feedback, and practice tests.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">3. Account Registration</h2>
+			<p class="text-gray-600 mb-4">You may use certain features of the App without creating an account. To access personalized features such as progress tracking across devices, you may choose to sign in with Apple or Google. Account registration is optional for purchasing subscriptions.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">4. Subscriptions and Payments</h2>
+			<p class="text-gray-600 mb-4">The App offers the following subscription options:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li><strong>Monthly Premium:</strong> Auto-renewing monthly subscription</li>
+				<li><strong>Annual Premium:</strong> Auto-renewing yearly subscription</li>
+				<li><strong>Lifetime Premium:</strong> One-time purchase for permanent access</li>
+			</ul>
+			<p class="text-gray-600 mb-4">Subscriptions are billed through Apple App Store or Google Play Store. Prices are displayed in the App at the time of purchase. Auto-renewable subscriptions will automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage and cancel subscriptions in your device's account settings.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">5. Free Content</h2>
+			<p class="text-gray-600 mb-4">The App provides a limited number of exercises for free. Premium content requires an active subscription or lifetime purchase.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">6. Acceptable Use</h2>
+			<p class="text-gray-600 mb-4">You agree not to:</p>
+			<ul class="list-disc pl-6 text-gray-600 mb-4 space-y-1">
+				<li>Reverse engineer, decompile, or disassemble the App</li>
+				<li>Use the App for any unlawful purpose</li>
+				<li>Attempt to gain unauthorized access to the App's systems</li>
+				<li>Share or redistribute App content without permission</li>
+			</ul>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">7. Intellectual Property</h2>
+			<p class="text-gray-600 mb-4">All content, features, and functionality of the App are owned by SpeakFluent and are protected by copyright, trademark, and other intellectual property laws.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">8. Disclaimer</h2>
+			<p class="text-gray-600 mb-4">The App is provided "as is" without warranties of any kind. While we strive for accuracy, we do not guarantee that the App will ensure you pass the inburgering exam. Results depend on individual effort and preparation.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">9. Limitation of Liability</h2>
+			<p class="text-gray-600 mb-4">To the maximum extent permitted by law, SpeakFluent shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">10. Changes to Terms</h2>
+			<p class="text-gray-600 mb-4">We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+
+			<h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">11. Contact</h2>
+			<p class="text-gray-600 mb-4">For questions about these Terms, contact us at <a href={`mailto:${contactEmail}`} class="text-orange-600 hover:text-orange-700">{contactEmail}</a>.</p>
+		</div>
+	</main>
+
+	<footer class="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto text-center text-sm">
+			<div class="flex justify-center space-x-6 mb-4">
+				<a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+				<a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+			</div>
+			<p>&copy; 2025 SpeakFluent. All rights reserved.</p>
+		</div>
+	</footer>
+
+</body>
+</html>
