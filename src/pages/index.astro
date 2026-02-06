@@ -192,13 +192,13 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 
 	<!-- Pricing Section -->
 	<section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-		<div class="max-w-5xl mx-auto">
+		<div class="max-w-6xl mx-auto">
 			<div class="text-center mb-16">
 				<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple pricing</h2>
 				<p class="text-lg text-gray-600">Start for free. Upgrade when you're ready.</p>
 			</div>
 
-			<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 				<!-- Free Tier -->
 				<div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
 					<div class="mb-8">
@@ -228,23 +228,57 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 							<span class="text-gray-700">Progress tracking</span>
 						</li>
 					</ul>
-					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+					<a href="#download" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
 						Get Started
 					</a>
 				</div>
 
-				<!-- Premium Tier -->
+				<!-- Monthly Tier -->
+				<div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
+					<div class="mb-8">
+						<h3 class="text-xl font-semibold text-gray-900 mb-2">Monthly</h3>
+						<div class="flex items-baseline">
+							<span class="text-4xl font-bold text-gray-900">€8.99</span>
+							<span class="text-gray-500 ml-2">/month</span>
+						</div>
+					</div>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+							</svg>
+							<span class="text-gray-700"><strong>All 200+ questions</strong></span>
+						</li>
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+							</svg>
+							<span class="text-gray-700">Unlimited practice tests</span>
+						</li>
+						<li class="flex items-start text-sm">
+							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+							</svg>
+							<span class="text-gray-700">AI feedback & analytics</span>
+						</li>
+					</ul>
+					<a href="#download" class="block w-full text-center py-3 px-4 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+						Get Started
+					</a>
+				</div>
+
+				<!-- Annual Tier -->
 				<div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl p-8 text-white relative">
 					<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-900 px-3 py-1 rounded-full text-xs font-semibold">
 						MOST POPULAR
 					</div>
 					<div class="mb-8">
-						<h3 class="text-xl font-semibold mb-2">Premium</h3>
+						<h3 class="text-xl font-semibold mb-2">Annual</h3>
 						<div class="flex items-baseline">
-							<span class="text-4xl font-bold">€8.99</span>
-							<span class="text-orange-200 ml-2">/month</span>
+							<span class="text-4xl font-bold">€59.99</span>
+							<span class="text-orange-200 ml-2">/year</span>
 						</div>
-						<p class="text-sm text-orange-200 mt-2">or €49.99/year (save 54%)</p>
+						<p class="text-sm text-orange-200 mt-2">€5/month — save 44%</p>
 					</div>
 					<ul class="space-y-3 mb-8">
 						<li class="flex items-start text-sm">
@@ -278,8 +312,8 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 							<span>Gamification & achievements</span>
 						</li>
 					</ul>
-					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 px-4 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
-						Start Free Trial
+					<a href="#download" class="block w-full text-center py-3 px-4 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+						Get Started
 					</a>
 				</div>
 
@@ -291,7 +325,7 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 					<div class="mb-8">
 						<h3 class="text-xl font-semibold text-gray-900 mb-2">Lifetime</h3>
 						<div class="flex items-baseline">
-							<span class="text-4xl font-bold text-gray-900">€99.99</span>
+							<span class="text-4xl font-bold text-gray-900">€119.99</span>
 							<span class="text-gray-500 ml-2">/once</span>
 						</div>
 						<p class="text-sm text-gray-500 mt-2">Pay once, own it forever</p>
@@ -301,7 +335,7 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
 							</svg>
-							<span class="text-gray-700"><strong>Everything in Premium</strong></span>
+							<span class="text-gray-700"><strong>Everything in Annual</strong></span>
 						</li>
 						<li class="flex items-start text-sm">
 							<svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,7 +356,7 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 							<span class="text-gray-700">Lifetime access guaranteed</span>
 						</li>
 					</ul>
-					<a href={iosAppUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 px-4 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+					<a href="#download" class="block w-full text-center py-3 px-4 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
 						Get Lifetime Access
 					</a>
 				</div>
@@ -335,7 +369,7 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 					<div class="inline-flex items-center gap-6 sm:gap-8 text-sm min-w-max px-4 sm:px-0 justify-center sm:w-full">
 						<div>
 							<div class="font-semibold text-gray-900">SpeakFluent</div>
-							<div class="text-green-600 font-medium">€8.99/month</div>
+							<div class="text-green-600 font-medium">from €5/month</div>
 						</div>
 						<div class="text-gray-400">vs</div>
 						<div>
@@ -415,7 +449,7 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 	</section>
 
 	<!-- Final CTA -->
-	<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
+	<section id="download" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
 		<div class="max-w-3xl mx-auto text-center">
 			<h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to pass your exam?</h2>
 			<p class="text-lg text-orange-100 mb-8">Start practicing today with SpeakFluent</p>
