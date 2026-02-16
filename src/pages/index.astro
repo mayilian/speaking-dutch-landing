@@ -40,6 +40,20 @@ const ogImage = `${siteUrl}/og-image.png?v=7`;
 	<meta property="twitter:image" content={ogImage} />
 	<meta property="twitter:image:alt" content="SpeakFluent - Master Dutch Speaking for Your Inburgering Exam" />
 
+	<!-- Google Ads conversion tracking -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16483025104"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'AW-16483025104');
+		gtag('event', 'conversion', {
+			'send_to': 'AW-16483025104/JHCICNuL7PkbENCB3LM9',
+			'value': 1.0,
+			'currency': 'EUR'
+		});
+	</script>
+
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
